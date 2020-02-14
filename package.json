@@ -1,0 +1,25 @@
+{
+  "name": "readmegenerator",
+  "version": "1.0.0",
+  "description": "read_me_gen",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "inquirer": "^7.0.4",
+    "util": "^0.12.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cswitzer85/readMeGenerator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cswitzer85/readMeGenerator/issues"
+  },
+  "homepage": "https://github.com/cswitzer85/readMeGenerator#readme"
+}
