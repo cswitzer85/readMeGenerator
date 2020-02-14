@@ -3,8 +3,12 @@ const axios = require("axios");
 const inquirer = require("inquirer");
 const util = require("util");
 require('dotenv').config();
+var api = require("./api.js");
+var generateMarkdown = require("./generateMarkdown")
+
 
 const writeFileAsync = util.promisify(fs.writeFile);
+const userName = ""
 
 function promptUser() {
   return inquirer.prompt([
@@ -19,12 +23,12 @@ function promptUser() {
       name: "repoName"
   },])
 	}
-	.then(function ({ userName}) {
-		const queryUrl = `https://api.github.com/users/${userName}`;
-		axios.get(queryUrl).then(function (res) {
-			const userEmail = (function (users.email) {
-				console.log(userEmail);
-			});
+	// .then(function ({ userName}) {
+	// 	const queryUrl = `https://api.github.com/users/${userName}`;
+	// 	axios.get(queryUrl).then(function (res) {
+	// 		const userEmail = (function (users.email) {
+	// 			console.log(userEmail);
+	// 		});
 
     //   const repoDataThatIDontEvenKnowINeedYet = repoNames.join("\n");
       // const description;
@@ -42,7 +46,11 @@ function promptUser() {
 			// 		throw err;
 			// 	}
 
-			// 	console.log(`Saved ${repoNames.length} repos to new file`);
 			// });
-		});
-	});
+	// 	});
+  // });
+
+
+  // email data found using "eventsPageAPI[0].payload.commits[0].author.email"
+  // user avatar URL found using "userPageAPI.avatar_url"
+  promptUser();

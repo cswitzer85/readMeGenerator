@@ -5,8 +5,8 @@ A README.md generator that retrieves information from GitHub when user provides 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
-* [About the Repo](#about-the-repo)
-* [Getting Started](#getting-started)
+* [About the Repo](#about_the_repo)
+* [Getting Started](#getting_started)
 * [Usage](#usage)
 * [Contributing](#contributing)
 * [License](#license)
@@ -17,7 +17,8 @@ A README.md generator that retrieves information from GitHub when user provides 
 <!-- ABOUT THE REPOSITORY -->
 ## About The Repo
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+`screenShot goes here`
+`info about repo here`
 
 
 <!-- GETTING STARTED -->
