@@ -2,6 +2,7 @@ const fs = require("fs");
 const axios = require("axios");
 const inquirer = require("inquirer");
 const util = require("util");
+require('dotenv').config();
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
