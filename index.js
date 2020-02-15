@@ -3,8 +3,8 @@ const axios = require("axios");
 const inquirer = require("inquirer");
 const util = require("util");
 require('dotenv').config();
-// var api = require("./api");
-// var generateMarkdown = require("./generateMarkdown");
+var getProfile = require("./api");
+var generateMarkdown = require("./generateMarkdown");
 const writeFileAsync = util.promisify(fs.writeFile);
 
 function promptUser() {
@@ -15,7 +15,7 @@ function promptUser() {
 			},
 			{
 				type: "input",
-				name: "projectTitle",
+				name: "title",
 				message: "What is the name of your project?"
 			},
 			{
@@ -30,7 +30,7 @@ function promptUser() {
 			},
 			{
 				type: "input",
-				name: "installation",
+				name: "install",
 				message: "How should your project be installed?"
 			},
 			{
@@ -52,72 +52,53 @@ function promptUser() {
 				type: "input",
 				name: "tests",
 				message: "What tests are in your poject?"
+			},
+			{
+				type: "input",
+				name: "questions",
+				message: "What questions need to be answered?"
 			}
+
 		])
 
-		//api.js content
-		.then((promptData) => {
-			console.log("userName; ", promptData.userName);
-			const avatarUrl = `https://api.github.com/users/${promptData.userName}`;
-			console.log("avatarUrl ", avatarUrl);
-			axios
-				.get(avatarUrl)
-				.then((apiRes) => {
-					const userAvatar = apiRes.data.avatar_url
-					console.log("userAvatar ", userAvatar)
-					let emailUrl = apiRes.data.events_url
-					if (emailUrl.indexOf("{/privacy}") > -1) {
-						emailUrl = emailUrl.substring(0, emailUrl.indexOf("{/privacy}"));
-					}
-					console.log("emailUrl ", emailUrl)
-					axios
-						.get(emailUrl)
-						.then((emailRes) => {
-							console.log("emailRes ", emailRes.data[0].payload.commits[0].author.email); // prints to this point
-						}); //end of .then((emailRes) =>{})
-				}) //end of .then((apiRes) =>{})
-		}) //end of .then((promptData) =>{})
-    ;
-  } //end of promptUser()
-    //generateMarkdown.js content
-function createReadMe(res) {
-  return`
-      ## ${promptUser.title}
-      [![npm version](https://badge.fury.io/js/inquirer.svg)](https://badge.fury.io/js/inquirer)//Badge markdown
-      ## ${promptUser.userName}
-      ## ${promptUser.description}
-      ## ${promptUser.tableOfContents}
-      // * Title
-      // * Description
-      // * Table of Contents
-      // * Installation
-      // * Usage
-      // * License
-      // * Contributing
-      // * Tests
-      // * Questions
-      ## ${promptUser.installation}
-      ## ${promptUser.usage}
-      ## ${promptUser.license}
-      ## ${promptUser.contributing}
-      ## ${promptUser.tests}
-      ## ${promptUser.questions}`;
     
-    }
+    //generateMarkdown.js content
+    // .then((promptData) => {
+      // 	console.log("after API .then generateMarkdown ", promptData);
+      // 	generateMarkdown(promptData);
+      // });
+      
+      // }) //end of .then((promptData) =>{})
+      
+      
+    } //end of promptUser()
+    
+    
+    //email data found using "eventsPageAPI[0].payload.commits[0].author.email"   ----------   user avatar URL found using "userPageAPI.avatar_url"
+    
+    async function init() {
+      console.log("initiated async function init");
+      try {
+        const res = await promptUser();
+        console.log("promptUser eneded: ", res);
+        
+        // api.js content
+        const profileRes = await getProfile(res);
+        console.log("getProfile ended: " , getProfile);
+        console.log("res still... " , res);
+        console.log("user email and avatar " , profileRes);
+        console.log("email: " , profileRes.email);
+        console.log("avatar: " , profileRes.avatar);
 
-//email data found using "eventsPageAPI[0].payload.commits[0].author.email"
-// user avatar URL found using "userPageAPI.avatar_url"
-async function init() {
-	console.log("initiated async function init");
-	try {
-		const res = await promptUser();
 
-		const markdown = createReadMe(res);
-		await writeFileAsync("README.md", markdown);
-		console.log("Ding, your readme is done!");
+		// const markdown = generateMarkdown(promptData);
+		// console.log("init md ", res)
+
+		// await writeFileAsync("README.md", markdown);
+		// console.log("Ding, your readme is done!");
+
 	} catch (err) {
 		console.log(err);
 	}
 }
 init();
-// promptUser();
