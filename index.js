@@ -56,31 +56,31 @@ function promptUser() {
 		])
 
 		//api.js content
-		.then((userName) => {
-			console.log("first then; " + userName)
-			const avatarUrl = `https://api.github.com/users/${userName}`
+		.then((promptData) => {
+			console.log("first then; " , promptData.userName);
+      const avatarUrl = `https://api.github.com/users/${promptData.userName}`;
+      console.log(avatarUrl);
 			axios
 				.get(avatarUrl)
 				.then((apiRes) => {
-          console.log("second then; " + userName)
-						console.log(apiRes.data);
-						const userAvatar = apiRes.data.avatar_url
-					
-					.then((userName) => {
-            console.log("third then; " + userName)
-						const emailUrl = `https://api.github.com/users/${userName}/events/public`
-							.get(emailUrl)
-							.then((apiEventsRes) => {
-                console.log("fourth then; " + userName)
-								const emailQueryUrl = ``;
-								const userEmail = api.Res.data[0].payload.commits[0].author.email
+            const userAvatar = apiRes.data.avatar_url
+            console.log(userAvatar)
+            const emailUrl = emailRes.data.events
+            .get(emailUrl)
+            .then((emailRes) => {
+              console.log(emailRes);
+            });
+							// .then((apiEventsRes) => {
+							// 	const emailQueryUrl = ``;
+							// 	const userEmail = apiRes.data[0].payload.commits[0].author.email
 
-								// email data found using "eventsPageAPI[0].payload.commits[0].author.email"
-								// user avatar URL found using "userPageAPI.avatar_url"
-							})
+							// 	// email data found using "eventsPageAPI[0].payload.commits[0].author.email"
+							// 	// user avatar URL found using "userPageAPI.avatar_url"
+							// })
 					})})}
-		)
-};
+// 		)
+// }
+;
 //generateMarkdown.js content
 function generateMarkdown(data) {
 	return `
@@ -108,16 +108,17 @@ function generateMarkdown(data) {
 };
 //email data found using "eventsPageAPI[0].payload.commits[0].author.email"
 // user avatar URL found using "userPageAPI.avatar_url"
-// async function init() {
-// 	console.log("initiated async function init");
-// 	try {
-// 		const res = await promptUser();
-// 		const markdown = generateMarkdown(data);
-// 		await writeFileAsync("README.md", markdown);
-// 		console.log("Ding, your readme is done!");
-// 	} catch (err) {
-// 		console.log(err);
-// 	}
-// }
-// init();
-promptUser();
+async function init() {
+	console.log("initiated async function init");
+	try {
+    const res = await promptUser();
+    
+		// const markdown = generateMarkdown(data);
+		// await writeFileAsync("README.md", markdown);
+		// console.log("Ding, your readme is done!");
+	} catch (err) {
+		console.log(err);
+	}
+}
+init();
+// promptUser();
