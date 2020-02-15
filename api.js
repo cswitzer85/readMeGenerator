@@ -1,14 +1,19 @@
-const axios = require("axios");
+// const axios = require("axios");
 
-axios
-	.get("https://api.github.com/users/${userName}")
-	.then(function (res) {
-		console.log(res.data);
-		// const queryUrl = `https://api.github.com/users/${userName}`;
-    // const api = {res.data.avatar_url};
+// axios
+// 	.get(`https://api.github.com/users/${userName}`)
+// 	.then(function (apiRes) {
+// 		console.log(apiRes.data);
+//     const userAvatar = apiRes.data.avatar_url
+//   }
+//   .get(`https://api.github.com/users/${userName}/events/public`)
+// 	.then(function (apiEventsRes) {
+//     const emailQueryUrl = ``;
+//     const userEmail = api.Res.data[0].payload.commits[0].author.email
     
-		// email data found using "eventsPageAPI[0].payload.commits[0].author.email"
-		// user avatar URL found using "userPageAPI.avatar_url"
-	});
+// 		// email data found using "eventsPageAPI[0].payload.commits[0].author.email"
+// 		// user avatar URL found using "userPageAPI.avatar_url"
+//   }
+//   ));
 
-module.exports = api;
+// module.exports = api;
