@@ -59,16 +59,22 @@ function promptUser() {
 		.then((promptData) => {
 			console.log("first then; " , promptData.userName);
       const avatarUrl = `https://api.github.com/users/${promptData.userName}`;
-      console.log(avatarUrl);
+      console.log("avatarUrl " , avatarUrl);
 			axios
 				.get(avatarUrl)
 				.then((apiRes) => {
             const userAvatar = apiRes.data.avatar_url
-            console.log(userAvatar)
-            const emailUrl = emailRes.data.events
+            console.log("userAvatar " , userAvatar)
+            let emailUrl = apiRes.data.events_url
+            if(emailUrl.indexOf("{/privacy}") > -1){
+              emailUrl = emailUrl.substring(0, emailUrl.indexOf("{/privacy}"));
+              console.log(emailUrl)
+            }
+            console.log("emailUrl " , emailUrl)// prints to this point
+            axios
             .get(emailUrl)
             .then((emailRes) => {
-              console.log(emailRes);
+              console.log("emailRes " , emailRes.data[0].payload.commits[0].author.email);
             });
 							// .then((apiEventsRes) => {
 							// 	const emailQueryUrl = ``;
