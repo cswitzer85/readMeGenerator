@@ -12,7 +12,15 @@ cswitzer85@gmail.com
 
 
 ## Table of Contents
-* Title * Description * Table of Contents * Installation * Usage * License * Contributing * Tests * Questions
+* Title
+* Description
+* Table of Contents
+* Installation
+* Usage
+* License
+* Contributing
+* Tests
+* Questions
 
 
 ## About The Repo
@@ -30,7 +38,7 @@ This project gets information from the user, fills in a basic readme.md file tem
 4. Your README.md is created in the same folder location as the index.js that you ran to start the program.
 
 
-![alt text](repos/readMeGenerator/Screen Shot 2020-02-15 at 9.31.40 PM.png?raw=true "screenShot")
+![alt text](Screen Shot 2020-02-15 at 9.31.40 PM.png?raw=true "screenShot")
 
 
 ## Usage

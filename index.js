@@ -1,5 +1,6 @@
+//install "axios", "inquirer" and "util" before running this program
 const fs = require("fs");
-const axios = require("axios");
+// const axios = require("axios"); -- this is used in the api.js file
 const inquirer = require("inquirer");
 const util = require("util");
 require('dotenv').config();
@@ -7,6 +8,7 @@ var getProfile = require("./api");
 var generateMarkdown = require("./generateMarkdown");
 const writeFileAsync = util.promisify(fs.writeFile);
 
+//user defined inquiry
 function promptUser() {
 	return inquirer.prompt([{
 			type: "input",
@@ -62,26 +64,19 @@ function promptUser() {
 } //end of promptUser()
 
 async function init() {
-	console.log("initiated async function init");
 	try {
+    //gets user input for questions
 		const res = await promptUser();
-		console.log("promptUser eneded: ", res);
-
-		// api.js content
-		const profileRes = await getProfile(res);
-		console.log("getProfile ended: ", getProfile);
-		console.log("res still... ", res);
-		console.log("user email and avatar ", profileRes);
-		console.log("email: ", profileRes.email);
-		console.log("avatar: ", profileRes.avatar);
-
-		const generatedRes = await generateMarkdown(res, profileRes);
-		console.log("generateMarkdown ended: ", generatedRes);
-
-		const markdown = generatedRes;
-		await writeFileAsync("README.md", markdown);
-		console.log("Ding, your readme is done!");
-
+		//runs api.js
+    const profileRes = await getProfile(res);
+    //takes info from res and profileRes and plugs into readme template
+    const generatedRes = await generateMarkdown(res, profileRes);
+    //creates new const with all data combined from user input, API call and template to be used in readme
+    const markdown = generatedRes;
+    //creates a new md document with the data in markdown
+    await writeFileAsync("README.md", markdown);
+		console.log("Ding, your readme is done!"); //would you like an apple pie with that?
+  //log error if error occurs
 	} catch (err) {
 		console.log(err);
 	}
