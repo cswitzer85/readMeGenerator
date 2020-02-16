@@ -58,7 +58,7 @@ function promptUser() {
 		{
 			type: "input",
 			name: "questions",
-			message: "What questions need to be answered?"
+			message: "What should the user do if they have questions?"
 		}
 	])
 } //end of promptUser()
