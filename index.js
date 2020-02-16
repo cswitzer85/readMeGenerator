@@ -90,9 +90,9 @@ function promptUser() {
         console.log("email: " , profileRes.email);
         console.log("avatar: " , profileRes.avatar);
 
+        const generatedRes = await generateMarkdown(res, profileRes);
+        // console.log(JSON.stringify("generateMarkdown ended: " , generateMarkdown));
 
-		// const markdown = generateMarkdown(promptData);
-		// console.log("init md ", res)
 
 		// await writeFileAsync("README.md", markdown);
 		// console.log("Ding, your readme is done!");
