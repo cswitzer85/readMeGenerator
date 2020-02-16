@@ -6,9 +6,9 @@ ${res.title}
 [![npm version](https://badge.fury.io/js/inquirer.svg)](https://badge.fury.io/js/inquirer)
 
 ## Contact:
-${res.userName}
+${res.userName}  
+E-mail: ${profileRes.email}  
 ![alt text](${profileRes.avatar})
-E-mail: ${profileRes.email}
 
 ## Description:
 ${res.description}

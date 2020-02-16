@@ -5,9 +5,9 @@ readMeGenerator
 [![npm version](https://badge.fury.io/js/inquirer.svg)](https://badge.fury.io/js/inquirer)
 
 ## Contact:
-Username: cswitzer85
+Username: cswitzer85  
+E-mail: cswitzer85@gmail.com  
 ![alt text](https://avatars3.githubusercontent.com/u/56979386?v=4)
-E-mail: cswitzer85@gmail.com
 
 ## Description:
 The readme generator will survey you for your GitHub user name and information about your project in order to create a readme.md file for you to include in the project.
