@@ -1,7 +1,6 @@
 const generateMarkdown = (res, profileRes) => {
 	return `
-## Title:
-${res.title}
+## Title: ${res.title}
 
 [![npm version](https://badge.fury.io/js/inquirer.svg)](https://badge.fury.io/js/inquirer)
 

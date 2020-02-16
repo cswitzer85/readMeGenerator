@@ -1,11 +1,10 @@
 
-## Title:
-readMeGenerator
+## Title: readMeGenerator
 
 [![npm version](https://badge.fury.io/js/inquirer.svg)](https://badge.fury.io/js/inquirer)
 
 ## Contact:
-Username: cswitzer85  
+cswitzer85  
 E-mail: cswitzer85@gmail.com  
 ![alt text](https://avatars3.githubusercontent.com/u/56979386?v=4)
 
