@@ -91,9 +91,9 @@ function promptUser() {
         console.log("avatar: " , profileRes.avatar);
 
         const generatedRes = await generateMarkdown(res, profileRes);
-        // console.log(JSON.stringify("generateMarkdown ended: " , generateMarkdown));
-
-
+        console.log("generateMarkdown ended: " , generatedRes);
+        
+        // const markdown = generatedRes;
 		// await writeFileAsync("README.md", markdown);
 		// console.log("Ding, your readme is done!");
 
