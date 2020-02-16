@@ -38,7 +38,7 @@ This project gets information from the user, fills in a basic readme.md file tem
 4. Your README.md is created in the same folder location as the index.js that you ran to start the program.
 
 
-![alt text](Screen Shot 2020-02-15 at 9.31.40 PM.png)
+![alt text](https://github.com/cswitzer85/readMeGenerator/blob/master/Screen%20Shot%202020-02-15%20at%209.31.40%20PM.png?raw=true)
 
 
 ## Usage
