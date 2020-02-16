@@ -1,25 +1,26 @@
 
 ## Title:
-readmeGenerator
+readMeGenerator
 
 [![npm version](https://badge.fury.io/js/inquirer.svg)](https://badge.fury.io/js/inquirer)
 
 ## Contact:
-![alt text](cswitzer85@gmail.com)
+Username: cswitzer85
+E-mail: cswitzer85@gmail.com
 
 ![alt text](https://avatars3.githubusercontent.com/u/56979386?v=4)
 
 ## Description:
-The readme generator will survey you for your GitHub user name and information about your project in order to create a readme.md file for you to include in the project
+The readme generator will survey you for your GitHub user name and information about your project in order to create a readme.md file for you to include in the project.
 
 ## Table of Contents:
-* Title * Description * Table of Contents * Installation * Usage * License * Contributing * Tests * Questions
+Title | Description | Table of Contents | Installation | Usage | License | Contributing | Tests | Questions
 
 ## Installation:
 undefined
 
 ## Usage:
-This project gets information from the user, fills in a basic readme.md file template and creates a new markdown file based on the cobined user data and template. Just start the program, answer the questions and your README.md file will autonmatically pop up in the same location as the index.js file that you ran to start the program.
+launch using node index.js and answer the questions, which are previewed below and will cycle through to generate your README.md file.
 
 ## Licenses:
 None at this time.

@@ -38,7 +38,7 @@ This project gets information from the user, fills in a basic readme.md file tem
 4. Your README.md is created in the same folder location as the index.js that you ran to start the program.
 
 
-![alt text](Screen Shot 2020-02-15 at 9.31.40 PM.png?raw=true "screenShot")
+![alt text](Screen Shot 2020-02-15 at 9.31.40 PM.png)
 
 
 ## Usage
