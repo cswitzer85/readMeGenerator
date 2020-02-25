@@ -11,8 +11,17 @@ E-mail: cswitzer85@gmail.com
 ## Description:
 The readme generator will survey you for your GitHub user name and information about your project in order to create a readme.md file for you to include in the project.
 
-## Table of Contents:
-Title | Description | Table of Contents | Installation | Usage | License | Contributing | Tests | Questions
+## Table of Contents
+
+* [About the Project](#about-the-project)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [Contact](#contact)
+* [License(s)](#License(s))
+* [Acknowledgements](#acknowledgements)
 
 ## Installation:
 First, make sure your termial is at the same location as the index.js for the program. Then type `npm install axios inquirer util` into terminal to install the required modules. Once the installations are complete, type `node index.js` into terminal to start the program.

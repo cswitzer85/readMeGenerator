@@ -12,15 +12,13 @@ cswitzer85@gmail.com
 
 
 ## Table of Contents
-* Title
-* Description
-* Table of Contents
-* Installation
-* Usage
-* License
-* Contributing
-* Tests
-* Questions
+
+* [About the Project](#about-the-project)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [Contact](#contact)
+* [License(s)](#License(s))
+* [Acknowledgements](#acknowledgements)
 
 
 ## About The Repo

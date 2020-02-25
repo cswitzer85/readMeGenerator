@@ -11,10 +11,20 @@ E-mail: ${profileRes.email}
 
 ## Description:
 ${res.description}
-
+  
 ## Table of Contents:
-${res.tableOfContents}
 
+	* [Title](#title)
+	* [Contact](#contact)
+	* [Description](#description)
+	* [TableOfContents](#table_of_contents)
+	* [Installation](#installation)
+	* [Usage](#usage)
+	* [License(s)](#License(s))
+	* [Contributing](#contributing)
+	* [Tests](#tests)
+	* [Questions](#questions)
+  
 ## Installation:
 ${res.install}
 
