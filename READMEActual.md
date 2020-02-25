@@ -1,4 +1,5 @@
-# readMeGenerator
+## Title:
+readMeGenerator
 
 [![npm version](https://badge.fury.io/js/inquirer.svg)](https://badge.fury.io/js/inquirer)
 
@@ -13,19 +14,24 @@ cswitzer85@gmail.com
 
 ## Table of Contents
 
-* [About the Project](#about-the-project)
+* [Title](#title)
+* [Contact](#contact)
+* [TableOfContents](#table_of_contents)
+* [Description](#description)
+* [Installation](#installation)
 * [Usage](#usage)
 * [Contributing](#contributing)
-* [Contact](#contact)
 * [License(s)](#License(s))
 * [Acknowledgements](#acknowledgements)
 
+  
 
-## About The Repo
+
+## Description
 This project gets information from the user, fills in a basic readme.md file template and creates a new markdown file based on the cobined user data and template. Just start the program, answer the questions and your README.md file will autonmatically pop up in the same location as the index.js file that you ran to start the program.
 
 
-## Getting started
+## Installation
  
 1. Install the NPM packages listed at the top of the index.js
 
